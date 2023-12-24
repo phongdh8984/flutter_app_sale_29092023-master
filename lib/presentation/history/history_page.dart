@@ -23,6 +23,12 @@ class _HistoryPageState extends State<HistoryPage> {
   void initState() {
     // TODO: implement initState
     super.initState();
+    // var historyRepository = HistoryRepository();
+    // historyRepository.setApiService(ApiService());
+    // historyRepository.getListHistoryService()
+    // .then((value) => print(value))
+    // .catchError((value) => print(value));
+
   }
   @override
   Widget build(BuildContext context) {
@@ -37,7 +43,13 @@ class _HistoryPageState extends State<HistoryPage> {
             return repository;
           },
         ),
-
+        ProxyProvider<HistoryRepository, HistoryBloc>(
+          create: (context) => HistoryBloc(),
+          update: (_, historyRepo, bloc) {
+            bloc?.setHistoryRepo(historyRepo);
+            return bloc ?? HistoryBloc();
+          },
+        )
       ],
       child: HistoryContainer(),
       appBar: AppBar(

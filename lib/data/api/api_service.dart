@@ -30,14 +30,23 @@ class ApiService {
   Future<Response<dynamic>> requestListProduct() {
     return _dio.get("product");
   }
-
   Future<Response<dynamic>> requestAddToCart(String idProduct) {
     return _dio.post("cart/add", data: {
       "id_product": idProduct,
     });
   }
+  Future<Response<dynamic>> requestCart() {
+    return _dio.get("cart");
+  }
+  Future<Response<dynamic>> requestUpdateProductQuantityCart(String idProduct,String idCart,num quantity) {
+    return _dio.post("cart/update", data: {
+      "id_product": idProduct,
+      "id_cart": idCart,
+      "quantity": quantity,
+    });
+  }
   Future<Response<dynamic>> requestListHistory() {
-    return _dio.post("order/history", data: {});
+    return _dio.post("order/history");
   }
 
 }

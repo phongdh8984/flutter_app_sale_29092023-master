@@ -11,8 +11,6 @@ import 'package:flutter_app_sale_29092023/data/repository/cart_repository.dart';
 import 'package:flutter_app_sale_29092023/data/repository/product_repository.dart';
 import 'package:flutter_app_sale_29092023/presentation/product/product_bloc.dart';
 import 'package:flutter_app_sale_29092023/presentation/product/product_event.dart';
-import 'package:flutter_app_sale_29092023/presentation/sign_out/sign_out_bloc.dart';
-import 'package:flutter_app_sale_29092023/presentation/sign_out/sign_out_event.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 

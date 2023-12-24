@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_sale_29092023/data/local/app_share_preference.dart';
+import 'package:flutter_app_sale_29092023/presentation/cart/cart_page.dart';
 import 'package:flutter_app_sale_29092023/presentation/history/history_page.dart';
 import 'package:flutter_app_sale_29092023/presentation/product/product_page.dart';
 import 'package:flutter_app_sale_29092023/presentation/sign_in/sign_in_page.dart';
@@ -29,6 +30,7 @@ class MyApp extends StatelessWidget {
         "/sign-up": (context) => SignUpPage(),
         "/product": (context) => ProductPage(),
         "/history": (context) => HistoryPage(),
+        // "/cart": (context) => CartPage(),
       },
     );
   }
