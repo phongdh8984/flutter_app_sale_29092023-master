@@ -17,7 +17,7 @@ class ConfirmCartEvent extends BaseEvent {
 class UpdateProductCartEvent extends BaseEvent {
   String idCart;
   String idProduct;
-  int quantity;
+  num quantity;
   UpdateProductCartEvent(this.idProduct,this.idCart,this.quantity);
 
   @override

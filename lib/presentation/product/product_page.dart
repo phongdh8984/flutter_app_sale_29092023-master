@@ -33,6 +33,10 @@ class _ProductPageState extends State<ProductPage> {
   void clickHistory() {
     Navigator.pushReplacementNamed(context, "/history");
   }
+  void clickToCart() {
+    Navigator.pushReplacementNamed(context, "/cart");
+  }
+
   @override
   Widget build(BuildContext context) {
     return PageContainer(
@@ -92,7 +96,11 @@ class _ProductPageState extends State<ProductPage> {
                         return InkWell(
                           child: Container(
                               margin: EdgeInsets.only(right: 10),
-                              child: Icon(Icons.shopping_cart_outlined)
+                              child: IconButton(
+                                icon: Icon(Icons.shopping_cart_outlined),
+                                onPressed: () {
+                                  clickToCart();},
+                              )
                           ),
                         );
                       }
@@ -102,9 +110,11 @@ class _ProductPageState extends State<ProductPage> {
                       });
                       return Container(
                         margin: EdgeInsets.only(right: 10),
+
                         child: badges.Badge(
                           badgeContent: Text(count.toString(), style: const TextStyle(color: Colors.white),),
                           child: Icon(Icons.shopping_cart_outlined),
+
                         ),
                       );
                     }

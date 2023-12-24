@@ -21,7 +21,7 @@ class SplashPage extends StatelessWidget {
                   Future.delayed(const Duration(seconds: 2), () {
                     String token = AppSharePreference.getString(AppConstant.TOKEN_KEY);
                     if (token.isNotEmpty) {
-                      Navigator.pushReplacementNamed(context, "/history");
+                      Navigator.pushReplacementNamed(context, "/product");
                     } else {
                       Navigator.pushReplacementNamed(context, "/sign-in");
                     }
