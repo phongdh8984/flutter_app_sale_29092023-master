@@ -69,7 +69,7 @@ class _ProductPageState extends State<ProductPage> {
       ],
       child: ProductContainer(),
       appBar: AppBar(
-        title: const Text("Products"),
+        title: const Text("Sản phẩm"),
         leading: IconButton(
           icon: Icon(Icons.logout),
           onPressed: () {
